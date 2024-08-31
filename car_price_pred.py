@@ -42,6 +42,6 @@ if (st.button('Predict Price')):
 
     price = model_pred(fuel_type,transmission_type,engine,seats)
 
-    st.text(f'The Price of the car is {price} lakh rupees')
+    st.text(f'The Price of the car is {price[0].round(2)} lakh rupees')
 
 
