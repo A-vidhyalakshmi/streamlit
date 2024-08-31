@@ -14,10 +14,12 @@ st.write(
 
 st.dataframe(cars_df.head())
 
-fuel_type = st.selectbox("select the fuel type",['Diesel','Petrol','CNG','LPG','Electric'])
-engine = st.slider("set the engine power",500,5000,step=100)
-transmission_type = st.selectbox('select the transmission type',['Manual','Automatic'])
-seats = st.selectbox('Enter the number of seats',[4,5,7,9,11])
+col1,col2 = st.columns(2)
+
+fuel_type = col1.selectbox("select the fuel type",['Diesel','Petrol','CNG','LPG','Electric'])
+engine = col1.slider("set the engine power",500,5000,step=100)
+transmission_type = col2.selectbox('select the transmission type',['Manual','Automatic'])
+seats = col2.selectbox('Enter the number of seats',[4,5,7,9,11])
 
 # input_features = [[2018.0,1,4000,fuel_type,transmission_type,19.70,engine,86.30,seats]]
 
